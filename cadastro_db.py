@@ -2,9 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 import datetime as dt
 import os
-from insere_codigo_db import insere
 import os
 import re
+from insere_codigo_db import insere
+
 
 sistema = os.environ
 janela = tk.Tk()
