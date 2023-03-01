@@ -6,7 +6,6 @@ import os
 import re
 from insere_codigo_db import insere
 
-
 sistema = os.environ
 janela = tk.Tk()
 
@@ -29,7 +28,6 @@ for item_str in lista_tipos:
 lista_guarda_inseridos = []
 
 def inserir_codigo():
-
     tipo = combobox_selecionar_tipo.get()
     tipo_str = re.sub('[0-9]', '', tipo)
     tipo_str = re.sub('-', '', tipo_str)
@@ -62,9 +60,11 @@ def inserir_codigo():
         # insere os dados no banco
         insere(sql)
         break
+
     else: print("Não foi possível inserir os dados no sistema.")
 
 print(sistema['USERNAME'])
+
 janela.title('Ferramenta de cadastro de produtos')
 
 label_descricao = tk.Label(janela, text='Nome do Produto')
